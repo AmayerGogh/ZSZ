@@ -1,0 +1,621 @@
+﻿[2017-03-27 17:39:04,615 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- MySql script
+-- Created on 2017/3/27 17:39:04
+CREATE TABLE `__MigrationHistory`(
+	`MigrationId` nvarchar (150) NOT NULL, 
+	`ContextKey` nvarchar (300) NOT NULL, 
+	`Model` longblob NOT NULL, 
+	`ProductVersion` nvarchar (32) NOT NULL);
+
+ALTER TABLE `__MigrationHistory` ADD PRIMARY KEY (`MigrationId`, `ContextKey`);
+
+
+
+[2017-03-27 17:39:04,629 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Executing at 2017/3/27 17:39:04 +08:00
+
+[2017-03-27 17:39:04,857 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Failed in 226 ms with error: Specified key was too long; max key length is 767 bytes
+
+[2017-03-27 17:39:04,858 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:46:45,007 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：SELECT
+`GroupBy1`.`A1` AS `C1`
+FROM (SELECT
+COUNT(1) AS `A1`
+FROM `__MigrationHistory` AS `Extent1`) AS `GroupBy1`
+[2017-03-27 17:46:45,015 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:46:45,016 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Executing at 2017/3/27 17:46:45 +08:00
+
+[2017-03-27 17:46:45,020 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Failed in 2 ms with error: Table 'zsz.__migrationhistory' doesn't exist
+
+[2017-03-27 17:46:45,021 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:46:45,888 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：create table `T_AdminLogs` (`Id` bigint not null  auto_increment ,`AdminUserId` bigint not null ,`Message` longtext not null ,`CreateDateTime` datetime not null ,`IsDeleted` bool not null ,primary key ( `Id`) ) engine=InnoDb auto_increment=0
+[2017-03-27 17:46:45,889 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:46:45,890 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Executing at 2017/3/27 17:46:45 +08:00
+
+[2017-03-27 17:46:46,207 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Completed in 315 ms with result: 0
+
+[2017-03-27 17:46:46,207 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:46:46,208 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：create table `T_AdminUsers` (`Id` bigint not null  auto_increment ,`Name` nvarchar(50)  not null ,`PhoneNum` varchar(20)  not null ,`PasswordHash` varchar(100)  not null ,`PasswordSalt` varchar(20)  not null ,`Email` varchar(30)  not null ,`CityId` bigint,`LoginErrorTimes` int not null ,`LastLoginErrorDateTime` datetime,`CreateDateTime` datetime not null ,`IsDeleted` bool not null ,primary key ( `Id`) ) engine=InnoDb auto_increment=0
+[2017-03-27 17:46:46,208 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:46:46,209 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Executing at 2017/3/27 17:46:46 +08:00
+
+[2017-03-27 17:46:46,483 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Completed in 273 ms with result: 0
+
+[2017-03-27 17:46:46,484 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:46:46,484 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：create table `T_Cities` (`Id` bigint not null  auto_increment ,`Name` nvarchar(20)  not null ,`CreateDateTime` datetime not null ,`IsDeleted` bool not null ,primary key ( `Id`) ) engine=InnoDb auto_increment=0
+[2017-03-27 17:46:46,485 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:46:46,485 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Executing at 2017/3/27 17:46:46 +08:00
+
+[2017-03-27 17:46:46,816 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Completed in 330 ms with result: 0
+
+[2017-03-27 17:46:46,817 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:46:46,817 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：create table `T_Roles` (`Id` bigint not null  auto_increment ,`Name` nvarchar(50)  not null ,`CreateDateTime` datetime not null ,`IsDeleted` bool not null ,primary key ( `Id`) ) engine=InnoDb auto_increment=0
+[2017-03-27 17:46:46,818 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:46:46,818 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Executing at 2017/3/27 17:46:46 +08:00
+
+[2017-03-27 17:46:47,072 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Completed in 252 ms with result: 0
+
+[2017-03-27 17:46:47,072 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:46:47,073 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：create table `T_Permissions` (`Id` bigint not null  auto_increment ,`Description` nvarchar(1024) ,`Name` nvarchar(50)  not null ,`CreateDateTime` datetime not null ,`IsDeleted` bool not null ,primary key ( `Id`) ) engine=InnoDb auto_increment=0
+[2017-03-27 17:46:47,073 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:46:47,074 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Executing at 2017/3/27 17:46:47 +08:00
+
+[2017-03-27 17:46:47,349 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Completed in 274 ms with result: 0
+
+[2017-03-27 17:46:47,350 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:46:47,350 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：create table `T_Attachments` (`Id` bigint not null  auto_increment ,`Name` nvarchar(50)  not null ,`IconName` varchar(50)  not null ,`CreateDateTime` datetime not null ,`IsDeleted` bool not null ,primary key ( `Id`) ) engine=InnoDb auto_increment=0
+[2017-03-27 17:46:47,351 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:46:47,351 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Executing at 2017/3/27 17:46:47 +08:00
+
+[2017-03-27 17:46:47,583 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Completed in 231 ms with result: 0
+
+[2017-03-27 17:46:47,584 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:46:47,584 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：create table `T_Houses` (`Id` bigint not null  auto_increment ,`CommunityId` bigint not null ,`RoomTypeId` bigint not null ,`Address` nvarchar(128)  not null ,`MonthRent` int not null ,`StatusId` bigint not null ,`Area` decimal( 18, 2 )  not null ,`DecorateStatusId` bigint not null ,`TotalFloorCount` int not null ,`FloorIndex` int not null ,`TypeId` bigint not null ,`Direction` nvarchar(20)  not null ,`LookableDateTime` datetime not null ,`CheckInDateTime` datetime not null ,`OwnerName` nvarchar(20)  not null ,`OwnerPhoneNum` varchar(20)  not null ,`Description` longtext,`CreateDateTime` datetime not null ,`IsDeleted` bool not null ,primary key ( `Id`) ) engine=InnoDb auto_increment=0
+[2017-03-27 17:46:47,584 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:46:47,585 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Executing at 2017/3/27 17:46:47 +08:00
+
+[2017-03-27 17:46:47,905 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Completed in 319 ms with result: 0
+
+[2017-03-27 17:46:47,906 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:46:47,906 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：create table `T_Communities` (`Id` bigint not null  auto_increment ,`Name` nvarchar(20)  not null ,`RegionId` bigint not null ,`Location` nvarchar(1024)  not null ,`Traffic` longtext,`BuiltYear` int,`CreateDateTime` datetime not null ,`IsDeleted` bool not null ,primary key ( `Id`) ) engine=InnoDb auto_increment=0
+[2017-03-27 17:46:47,907 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:46:47,907 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Executing at 2017/3/27 17:46:47 +08:00
+
+[2017-03-27 17:46:48,150 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Completed in 242 ms with result: 0
+
+[2017-03-27 17:46:48,151 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:46:48,151 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：create table `T_Regions` (`Id` bigint not null  auto_increment ,`Name` nvarchar(50)  not null ,`CityId` bigint not null ,`CreateDateTime` datetime not null ,`IsDeleted` bool not null ,primary key ( `Id`) ) engine=InnoDb auto_increment=0
+[2017-03-27 17:46:48,152 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:46:48,153 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Executing at 2017/3/27 17:46:48 +08:00
+
+[2017-03-27 17:46:48,383 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Completed in 229 ms with result: 0
+
+[2017-03-27 17:46:48,384 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:46:48,384 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：create table `T_IdNames` (`Id` bigint not null  auto_increment ,`TypeName` nvarchar(1024)  not null ,`Name` nvarchar(1024)  not null ,`CreateDateTime` datetime not null ,`IsDeleted` bool not null ,primary key ( `Id`) ) engine=InnoDb auto_increment=0
+[2017-03-27 17:46:48,385 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:46:48,385 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Executing at 2017/3/27 17:46:48 +08:00
+
+[2017-03-27 17:46:48,605 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Completed in 218 ms with result: 0
+
+[2017-03-27 17:46:48,606 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:46:48,607 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：create table `T_HousePics` (`Id` bigint not null  auto_increment ,`HouseId` bigint not null ,`Url` nvarchar(1024)  not null ,`ThumbUrl` nvarchar(1024)  not null ,`CreateDateTime` datetime not null ,`IsDeleted` bool not null ,primary key ( `Id`) ) engine=InnoDb auto_increment=0
+[2017-03-27 17:46:48,607 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:46:48,608 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Executing at 2017/3/27 17:46:48 +08:00
+
+[2017-03-27 17:46:48,905 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Completed in 296 ms with result: 0
+
+[2017-03-27 17:46:48,906 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:46:48,906 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：create table `T_HouseAppointments` (`Id` bigint not null  auto_increment ,`UserId` bigint not null ,`Name` nvarchar(20)  not null ,`PhoneNum` varchar(20)  not null ,`VisitDate` datetime not null ,`HouseId` bigint not null ,`Status` nvarchar(20)  not null ,`FollowAdminUserId` bigint,`FollowDateTime` datetime,`CreateDateTime` datetime not null ,`IsDeleted` bool not null ,primary key ( `Id`) ) engine=InnoDb auto_increment=0
+[2017-03-27 17:46:48,907 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:46:48,907 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Executing at 2017/3/27 17:46:48 +08:00
+
+[2017-03-27 17:46:49,127 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Completed in 219 ms with result: 0
+
+[2017-03-27 17:46:49,128 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:46:49,129 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：create table `T_Users` (`Id` bigint not null  auto_increment ,`PhoneNum` varchar(20)  not null ,`PasswordHash` nvarchar(100)  not null ,`PasswordSalt` nvarchar(20)  not null ,`LoginErrorTimes` int not null ,`LastLoginErrorDateTime` datetime,`CityId` bigint not null ,`CreateDateTime` datetime not null ,`IsDeleted` bool not null ,primary key ( `Id`) ) engine=InnoDb auto_increment=0
+[2017-03-27 17:46:49,130 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:46:49,130 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Executing at 2017/3/27 17:46:49 +08:00
+
+[2017-03-27 17:46:49,349 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Completed in 218 ms with result: 0
+
+[2017-03-27 17:46:49,351 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:46:49,351 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：create table `T_Settings` (`Id` bigint not null  auto_increment ,`Name` nvarchar(1024)  not null ,`Value` longtext not null ,`CreateDateTime` datetime not null ,`IsDeleted` bool not null ,primary key ( `Id`) ) engine=InnoDb auto_increment=0
+[2017-03-27 17:46:49,352 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:46:49,352 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Executing at 2017/3/27 17:46:49 +08:00
+
+[2017-03-27 17:46:49,561 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Completed in 207 ms with result: 0
+
+[2017-03-27 17:46:49,561 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:46:49,562 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：create table `T_RolePermissions` (`RoleId` bigint not null ,`PermissionId` bigint not null ,primary key ( `RoleId`,`PermissionId`) ) engine=InnoDb auto_increment=0
+[2017-03-27 17:46:49,562 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:46:49,563 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Executing at 2017/3/27 17:46:49 +08:00
+
+[2017-03-27 17:46:49,805 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Completed in 241 ms with result: 0
+
+[2017-03-27 17:46:49,806 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:46:49,807 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：create table `T_AdminUserRoles` (`AdminUserId` bigint not null ,`RoleId` bigint not null ,primary key ( `AdminUserId`,`RoleId`) ) engine=InnoDb auto_increment=0
+[2017-03-27 17:46:49,807 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:46:49,808 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Executing at 2017/3/27 17:46:49 +08:00
+
+[2017-03-27 17:46:50,094 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Completed in 285 ms with result: 0
+
+[2017-03-27 17:46:50,095 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:46:50,095 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：create table `T_HouseAttachments` (`AttachmentId` bigint not null ,`HouseId` bigint not null ,primary key ( `AttachmentId`,`HouseId`) ) engine=InnoDb auto_increment=0
+[2017-03-27 17:46:50,095 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:46:50,096 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Executing at 2017/3/27 17:46:50 +08:00
+
+[2017-03-27 17:46:50,360 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Completed in 264 ms with result: 0
+
+[2017-03-27 17:46:50,361 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:46:50,362 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：CREATE index  `IX_CityId` on `T_AdminUsers` (`CityId` DESC) using HASH
+[2017-03-27 17:46:50,362 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:46:50,363 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Executing at 2017/3/27 17:46:50 +08:00
+
+[2017-03-27 17:46:50,573 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Completed in 209 ms with result: 0
+
+[2017-03-27 17:46:50,573 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:46:50,574 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：CREATE index  `IX_RoleId` on `T_RolePermissions` (`RoleId` DESC) using HASH
+[2017-03-27 17:46:50,574 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:46:50,575 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Executing at 2017/3/27 17:46:50 +08:00
+
+[2017-03-27 17:46:50,784 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Completed in 208 ms with result: 0
+
+[2017-03-27 17:46:50,784 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:46:50,785 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：CREATE index  `IX_PermissionId` on `T_RolePermissions` (`PermissionId` DESC) using HASH
+[2017-03-27 17:46:50,785 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:46:50,786 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Executing at 2017/3/27 17:46:50 +08:00
+
+[2017-03-27 17:46:51,017 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Completed in 231 ms with result: 0
+
+[2017-03-27 17:46:51,018 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:46:51,018 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：CREATE index  `IX_AdminUserId` on `T_AdminUserRoles` (`AdminUserId` DESC) using HASH
+[2017-03-27 17:46:51,019 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:46:51,019 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Executing at 2017/3/27 17:46:51 +08:00
+
+[2017-03-27 17:46:51,239 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Completed in 219 ms with result: 0
+
+[2017-03-27 17:46:51,240 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:46:51,241 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：CREATE index  `IX_RoleId` on `T_AdminUserRoles` (`RoleId` DESC) using HASH
+[2017-03-27 17:46:51,241 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:46:51,242 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Executing at 2017/3/27 17:46:51 +08:00
+
+[2017-03-27 17:46:51,451 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Completed in 207 ms with result: 0
+
+[2017-03-27 17:46:51,452 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:46:51,452 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：CREATE index  `IX_AdminUserId` on `T_AdminLogs` (`AdminUserId` DESC) using HASH
+[2017-03-27 17:46:51,453 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:46:51,453 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Executing at 2017/3/27 17:46:51 +08:00
+
+[2017-03-27 17:46:51,650 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Completed in 196 ms with result: 0
+
+[2017-03-27 17:46:51,651 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:46:51,651 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：CREATE index  `IX_CityId` on `T_Regions` (`CityId` DESC) using HASH
+[2017-03-27 17:46:51,652 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:46:51,652 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Executing at 2017/3/27 17:46:51 +08:00
+
+[2017-03-27 17:46:52,362 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Completed in 709 ms with result: 0
+
+[2017-03-27 17:46:52,363 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:46:52,363 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：CREATE index  `IX_RegionId` on `T_Communities` (`RegionId` DESC) using HASH
+[2017-03-27 17:46:52,364 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:46:52,366 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Executing at 2017/3/27 17:46:52 +08:00
+
+[2017-03-27 17:46:52,928 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Completed in 561 ms with result: 0
+
+[2017-03-27 17:46:52,929 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:46:52,929 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：CREATE index  `IX_CommunityId` on `T_Houses` (`CommunityId` DESC) using HASH
+[2017-03-27 17:46:52,930 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:46:52,930 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Executing at 2017/3/27 17:46:52 +08:00
+
+[2017-03-27 17:46:53,217 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Completed in 286 ms with result: 0
+
+[2017-03-27 17:46:53,218 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:46:53,218 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：CREATE index  `IX_DecorateStatusId` on `T_Houses` (`DecorateStatusId` DESC) using HASH
+[2017-03-27 17:46:53,219 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:46:53,220 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Executing at 2017/3/27 17:46:53 +08:00
+
+[2017-03-27 17:46:53,440 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Completed in 219 ms with result: 0
+
+[2017-03-27 17:46:53,440 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:46:53,441 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：CREATE index  `IX_HouseId` on `T_HousePics` (`HouseId` DESC) using HASH
+[2017-03-27 17:46:53,442 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:46:53,442 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Executing at 2017/3/27 17:46:53 +08:00
+
+[2017-03-27 17:46:53,662 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Completed in 218 ms with result: 0
+
+[2017-03-27 17:46:53,663 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:46:53,663 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：CREATE index  `IX_RoomTypeId` on `T_Houses` (`RoomTypeId` DESC) using HASH
+[2017-03-27 17:46:53,664 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:46:53,665 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Executing at 2017/3/27 17:46:53 +08:00
+
+[2017-03-27 17:46:54,096 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Completed in 430 ms with result: 0
+
+[2017-03-27 17:46:54,096 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:46:54,097 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：CREATE index  `IX_StatusId` on `T_Houses` (`StatusId` DESC) using HASH
+[2017-03-27 17:46:54,098 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:46:54,098 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Executing at 2017/3/27 17:46:54 +08:00
+
+[2017-03-27 17:46:54,317 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Completed in 218 ms with result: 0
+
+[2017-03-27 17:46:54,318 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:46:54,318 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：CREATE index  `IX_TypeId` on `T_Houses` (`TypeId` DESC) using HASH
+[2017-03-27 17:46:54,319 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:46:54,320 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Executing at 2017/3/27 17:46:54 +08:00
+
+[2017-03-27 17:46:54,561 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Completed in 241 ms with result: 0
+
+[2017-03-27 17:46:54,562 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:46:54,563 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：CREATE index  `IX_AttachmentId` on `T_HouseAttachments` (`AttachmentId` DESC) using HASH
+[2017-03-27 17:46:54,563 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:46:54,564 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Executing at 2017/3/27 17:46:54 +08:00
+
+[2017-03-27 17:46:54,773 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Completed in 208 ms with result: 0
+
+[2017-03-27 17:46:54,773 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:46:54,774 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：CREATE index  `IX_HouseId` on `T_HouseAttachments` (`HouseId` DESC) using HASH
+[2017-03-27 17:46:54,774 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:46:54,775 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Executing at 2017/3/27 17:46:54 +08:00
+
+[2017-03-27 17:46:54,984 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Completed in 208 ms with result: 0
+
+[2017-03-27 17:46:54,984 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:46:54,985 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：CREATE index  `IX_FollowAdminUserId` on `T_HouseAppointments` (`FollowAdminUserId` DESC) using HASH
+[2017-03-27 17:46:54,985 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:46:54,986 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Executing at 2017/3/27 17:46:54 +08:00
+
+[2017-03-27 17:46:55,208 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Completed in 222 ms with result: 0
+
+[2017-03-27 17:46:55,209 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:46:55,210 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：CREATE index  `IX_HouseId` on `T_HouseAppointments` (`HouseId` DESC) using HASH
+[2017-03-27 17:46:55,210 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:46:55,211 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Executing at 2017/3/27 17:46:55 +08:00
+
+[2017-03-27 17:46:55,429 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Completed in 216 ms with result: 0
+
+[2017-03-27 17:46:55,430 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:46:55,430 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：CREATE index  `IX_CityId` on `T_Users` (`CityId` DESC) using HASH
+[2017-03-27 17:46:55,431 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:46:55,431 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Executing at 2017/3/27 17:46:55 +08:00
+
+[2017-03-27 17:46:55,651 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Completed in 219 ms with result: 0
+
+[2017-03-27 17:46:55,652 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:46:55,653 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：CREATE index  `IX_UserId` on `T_HouseAppointments` (`UserId` DESC) using HASH
+[2017-03-27 17:46:55,653 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:46:55,654 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Executing at 2017/3/27 17:46:55 +08:00
+
+[2017-03-27 17:46:55,862 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Completed in 207 ms with result: 0
+
+[2017-03-27 17:46:55,863 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:46:55,864 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：alter table `T_AdminLogs` add constraint `FK_T_AdminLogs_T_AdminUsers_AdminUserId`  foreign key (`AdminUserId`) references `T_AdminUsers` ( `Id`) 
+[2017-03-27 17:46:55,864 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:46:55,865 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Executing at 2017/3/27 17:46:55 +08:00
+
+[2017-03-27 17:46:56,584 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Completed in 718 ms with result: 0
+
+[2017-03-27 17:46:56,584 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:46:56,585 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：alter table `T_AdminUsers` add constraint `FK_T_AdminUsers_T_Cities_CityId`  foreign key (`CityId`) references `T_Cities` ( `Id`) 
+[2017-03-27 17:46:56,585 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:46:56,586 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Executing at 2017/3/27 17:46:56 +08:00
+
+[2017-03-27 17:46:57,272 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Completed in 685 ms with result: 0
+
+[2017-03-27 17:46:57,273 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:46:57,274 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：alter table `T_Houses` add constraint `FK_T_Houses_T_Communities_CommunityId`  foreign key (`CommunityId`) references `T_Communities` ( `Id`) 
+[2017-03-27 17:46:57,274 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:46:57,275 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Executing at 2017/3/27 17:46:57 +08:00
+
+[2017-03-27 17:46:58,550 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Completed in 1273 ms with result: 0
+
+[2017-03-27 17:46:58,551 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:46:58,551 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：alter table `T_Houses` add constraint `FK_T_Houses_T_IdNames_DecorateStatusId`  foreign key (`DecorateStatusId`) references `T_IdNames` ( `Id`) 
+[2017-03-27 17:46:58,552 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:46:58,553 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Executing at 2017/3/27 17:46:58 +08:00
+
+[2017-03-27 17:46:59,517 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Completed in 963 ms with result: 0
+
+[2017-03-27 17:46:59,517 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:46:59,518 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：alter table `T_Houses` add constraint `FK_T_Houses_T_IdNames_RoomTypeId`  foreign key (`RoomTypeId`) references `T_IdNames` ( `Id`) 
+[2017-03-27 17:46:59,518 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:46:59,519 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Executing at 2017/3/27 17:46:59 +08:00
+
+[2017-03-27 17:47:00,317 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Completed in 797 ms with result: 0
+
+[2017-03-27 17:47:00,318 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:47:00,318 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：alter table `T_Houses` add constraint `FK_T_Houses_T_IdNames_StatusId`  foreign key (`StatusId`) references `T_IdNames` ( `Id`) 
+[2017-03-27 17:47:00,319 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:47:00,320 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Executing at 2017/3/27 17:47:00 +08:00
+
+[2017-03-27 17:47:01,062 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Completed in 740 ms with result: 0
+
+[2017-03-27 17:47:01,062 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:47:01,063 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：alter table `T_Houses` add constraint `FK_T_Houses_T_IdNames_TypeId`  foreign key (`TypeId`) references `T_IdNames` ( `Id`) 
+[2017-03-27 17:47:01,063 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:47:01,064 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Executing at 2017/3/27 17:47:01 +08:00
+
+[2017-03-27 17:47:01,851 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Completed in 786 ms with result: 0
+
+[2017-03-27 17:47:01,851 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:47:01,852 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：alter table `T_Communities` add constraint `FK_T_Communities_T_Regions_RegionId`  foreign key (`RegionId`) references `T_Regions` ( `Id`) 
+[2017-03-27 17:47:01,852 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:47:01,853 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Executing at 2017/3/27 17:47:01 +08:00
+
+[2017-03-27 17:47:02,461 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Completed in 607 ms with result: 0
+
+[2017-03-27 17:47:02,462 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:47:02,463 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：alter table `T_Regions` add constraint `FK_T_Regions_T_Cities_CityId`  foreign key (`CityId`) references `T_Cities` ( `Id`) 
+[2017-03-27 17:47:02,463 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:47:02,463 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Executing at 2017/3/27 17:47:02 +08:00
+
+[2017-03-27 17:47:03,295 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Completed in 830 ms with result: 0
+
+[2017-03-27 17:47:03,295 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:47:03,296 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：alter table `T_HousePics` add constraint `FK_T_HousePics_T_Houses_HouseId`  foreign key (`HouseId`) references `T_Houses` ( `Id`) 
+[2017-03-27 17:47:03,297 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:47:03,297 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Executing at 2017/3/27 17:47:03 +08:00
+
+[2017-03-27 17:47:04,128 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Completed in 829 ms with result: 0
+
+[2017-03-27 17:47:04,129 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:47:04,129 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：alter table `T_HouseAppointments` add constraint `FK_T_HouseAppointments_T_AdminUsers_FollowAdminUserId`  foreign key (`FollowAdminUserId`) references `T_AdminUsers` ( `Id`) 
+[2017-03-27 17:47:04,130 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:47:04,130 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Executing at 2017/3/27 17:47:04 +08:00
+
+[2017-03-27 17:47:04,784 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Completed in 652 ms with result: 0
+
+[2017-03-27 17:47:04,784 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:47:04,785 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：alter table `T_HouseAppointments` add constraint `FK_T_HouseAppointments_T_Houses_HouseId`  foreign key (`HouseId`) references `T_Houses` ( `Id`) 
+[2017-03-27 17:47:04,786 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:47:04,786 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Executing at 2017/3/27 17:47:04 +08:00
+
+[2017-03-27 17:47:05,506 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Completed in 718 ms with result: 0
+
+[2017-03-27 17:47:05,506 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:47:05,507 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：alter table `T_HouseAppointments` add constraint `FK_T_HouseAppointments_T_Users_UserId`  foreign key (`UserId`) references `T_Users` ( `Id`) 
+[2017-03-27 17:47:05,507 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:47:05,508 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Executing at 2017/3/27 17:47:05 +08:00
+
+[2017-03-27 17:47:06,195 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Completed in 686 ms with result: 0
+
+[2017-03-27 17:47:06,195 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:47:06,196 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：alter table `T_Users` add constraint `FK_T_Users_T_Cities_CityId`  foreign key (`CityId`) references `T_Cities` ( `Id`) 
+[2017-03-27 17:47:06,196 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:47:06,196 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Executing at 2017/3/27 17:47:06 +08:00
+
+[2017-03-27 17:47:06,761 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Completed in 564 ms with result: 0
+
+[2017-03-27 17:47:06,762 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:47:06,763 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：alter table `T_RolePermissions` add constraint `FK_T_RolePermissions_T_Roles_RoleId`  foreign key (`RoleId`) references `T_Roles` ( `Id`)  on update cascade on delete cascade 
+[2017-03-27 17:47:06,763 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:47:06,763 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Executing at 2017/3/27 17:47:06 +08:00
+
+[2017-03-27 17:47:07,350 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Completed in 586 ms with result: 0
+
+[2017-03-27 17:47:07,351 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:47:07,351 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：alter table `T_RolePermissions` add constraint `FK_T_RolePermissions_T_Permissions_PermissionId`  foreign key (`PermissionId`) references `T_Permissions` ( `Id`)  on update cascade on delete cascade 
+[2017-03-27 17:47:07,352 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:47:07,353 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Executing at 2017/3/27 17:47:07 +08:00
+
+[2017-03-27 17:47:07,972 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Completed in 618 ms with result: 0
+
+[2017-03-27 17:47:07,973 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:47:07,973 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：alter table `T_AdminUserRoles` add constraint `FK_T_AdminUserRoles_T_AdminUsers_AdminUserId`  foreign key (`AdminUserId`) references `T_AdminUsers` ( `Id`)  on update cascade on delete cascade 
+[2017-03-27 17:47:07,974 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:47:07,974 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Executing at 2017/3/27 17:47:07 +08:00
+
+[2017-03-27 17:47:08,672 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Completed in 698 ms with result: 0
+
+[2017-03-27 17:47:08,673 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:47:08,674 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：alter table `T_AdminUserRoles` add constraint `FK_T_AdminUserRoles_T_Roles_RoleId`  foreign key (`RoleId`) references `T_Roles` ( `Id`)  on update cascade on delete cascade 
+[2017-03-27 17:47:08,674 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:47:08,675 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Executing at 2017/3/27 17:47:08 +08:00
+
+[2017-03-27 17:47:09,594 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Completed in 919 ms with result: 0
+
+[2017-03-27 17:47:09,595 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:47:09,596 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：alter table `T_HouseAttachments` add constraint `FK_T_HouseAttachments_T_Attachments_AttachmentId`  foreign key (`AttachmentId`) references `T_Attachments` ( `Id`)  on update cascade on delete cascade 
+[2017-03-27 17:47:09,596 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:47:09,597 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Executing at 2017/3/27 17:47:09 +08:00
+
+[2017-03-27 17:47:10,550 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Completed in 952 ms with result: 0
+
+[2017-03-27 17:47:10,550 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:47:10,551 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：alter table `T_HouseAttachments` add constraint `FK_T_HouseAttachments_T_Houses_HouseId`  foreign key (`HouseId`) references `T_Houses` ( `Id`)  on update cascade on delete cascade 
+[2017-03-27 17:47:10,551 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:47:10,552 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Executing at 2017/3/27 17:47:10 +08:00
+
+[2017-03-27 17:47:11,361 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Completed in 808 ms with result: 0
+
+[2017-03-27 17:47:11,362 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:47:11,362 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：create table `__MigrationHistory` (`MigrationId` nvarchar(150)  not null ,`ContextKey` nvarchar(300)  not null ,`Model` longblob not null ,`ProductVersion` nvarchar(32)  not null ,primary key ( `MigrationId`) ) engine=InnoDb auto_increment=0
+[2017-03-27 17:47:11,363 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:47:11,363 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Executing at 2017/3/27 17:47:11 +08:00
+
+[2017-03-27 17:47:11,717 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Completed in 353 ms with result: 0
+
+[2017-03-27 17:47:11,717 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:47:11,718 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：INSERT INTO `__MigrationHistory`(
+`MigrationId`, 
+`ContextKey`, 
+`Model`, 
+`ProductVersion`) VALUES (
+'201703270946451_InitialCreate', 
+'ZSZ.Service.ZSZDbContext', 
+0x1F8B0800000000000400ED5D5F6FE336127F3FE0BE83E1C7031A67B36DD12B921669B27B0D6EB31BC46981DB9740B19944A82CF924799BFD6CF7701FE9BEC251FFF96F86A44449B6E3877663911C92C3DF0CFFCD70FEF79FFF9EFEFCB20A265F489CF85178367D73743C9D9070112DFDF0E96CBA491FBFF961FAF34F7FFDCBE9BBE5EA65F27B95EF6D968F960C93B3E9739AAE7F9CCD92C5335979C9D1CA5FC451123DA6478B6835F396D1ECE4F8F8EFB3376F66849298525A93C9E9ED264CFD15C97FD09F1751B820EB74E305D7D1920449F99DA6CC73AA938FDE8A246B6F41CEA69FE79F8FE624FEE22FC874721EF81E6DC29C048FD389178651EAA5B4813FFE9690791A47E1D37C4D3F78C1DDD735A1F91EBD202165C37F6CB29BF6E1F824EBC3AC29D88A07D3BA77B47FEF281FD2AF59F3F23E9E4DCF972B3FFC103D15096C5E9AFB9FE42BF7817EBA89A33589D3AFB7E4B1A470B59C4E667CB99958B02EC694C91A41FF0AD3EFBF9D4E3E6E82C07B0848CD3386B9F3348AC93F4848622F25CB1B2F4D491C663448D166B176A1AEBC877480627DA538A16B9224DE13A988D001A7A09D4EAEBD970F247C4A9F690EEF653A79EFBF9065F5A524FC5BE8538CD34269BC21D6155FC484F6FC92FE7747415CD5DFFCB62477955C9280505656947E89A28078A19ED047EF8BFF940F0AC4E3E9E49604798EE4D95F179272C463EC9EC9FC3E8E56B75120E1B0C9733F8F3671267A779126E39D173F91946FF3E9AC01BC5E0C3232FB2B07D9FF11EC7E77DC07746F9EA3907CDCAC908A4F741597BF6D6BF692E4CF285EFEEA25CF48ED6F8EFBAD7EEE05E9F09D7FB7F2FC00A9F66D3FD55E50184A90C68B5049F6C377711CC5992E4B98B26F4FACEBFFE0256943105698BBAE6E2F727187346DA3C6EE8B8C829615D2D51A56CCA4D2AE5813335289511BCB9C7023F30CDA5616B93A4D0259475FADFED76AA21D5EBA18232003D1AB45403F2B80ED4080D1E2D5A9BEAA3411AEAF2AAD66DAD61B12AFFC24DB14AB1BDB00F89ECBDAB4569D4352AF40B64EFAB521B4BF3276499245ECAF8BDD3AB2EA3CF9D648D80E02DD42A0E1B5476BF110A5592345EDF6A069EA2D9E571467FB2B1EA320F66A11855D2B6EB921DA7A59F935DA24D0425DC0E37D959799FAD459E4C53A90AFD37492D3D85F51B98856AB4DA8DA515BA2E6368A5659F9AE74CE97CB98240936AD9DFCD087FC5E4761FA7C4BB9D6ED74604EC7659374E60215E95A90C9C25F79C1747213D3BFCA2B0DCA82F9C2CBE8D93791128C32B4B869EA1D4562F03E88A2F822DA74E55E4EE72A5C92976E745C20F1D2A7FCD62CB1FAD9CF7E88A23FB2ECCE54FAC53359FC71153AA3F7E94FAA6F46D9EAE7358F77DE6BB6F036BDA1D9F569BD99709DCFEDD2C656B306303ED4ACE63B658399C9FE9EC9D9345799415A88A873D91E6EF26A5ADB5E31BBBAD17C2EB4E54256DBE6E7A46EFC05D2729ACA8EA6D466215D028532932D22AA858B96C14D46356BAB7494A975265B761AA2001F7D83516F39DA461CC4B8A7E51CC835F393F74A14F777393FCA9C7C4B9E68D3BB2EB73E440BCFD58196ED6A31F61E1FFD45EF33FA2F1B3F48FF45BC5858DCEEFA3AA0008052FC0599BBAFB2364A409D43520540B64E0AA1A0F16AB5414F27B70E0E13B61FF2E0E5388B29E9665C4A946F44A41C9D107EB5CCFEDD5F8467F56850DED7A43152B5DB211A76C7A7F5127D1F2198F7B0ABC2FB2DC60CA97A5BF73C6F560FE354BD1D30D6EE5FDDED5D955B1B6883DB5ED4CED7EBC80FD3FDBEDF7361673DCA4E69BC83CBDFFDC44F33F1EA2C6A4EF45D754C3130FFDF474110FD09DBEA9B94DE5F834F813BB0EE9394CCBD5454D086DA126AFDA82FD6EA54D2A6676AED0EE433ED05ACEDB1B6DB0E8AE148D8B0BFBB0FC47EBB3FEC812742BB89CD912342CBEBD2EDB3EE7FDD8720887380CE2FC0C425C058D9CC499A520CEEAFBE19E910E2772FD860F5EEB58B2284BEF32489167E3EACA2CD372B0B7C93DE85CB8989D74CC16985A538E5FB2648FD75E02FE8AFB3E9DFA45E6BAAA82F559B2A18171581FAF1D1D11BA9022A2E24CEF0EA0517540DA4B147170DB26CF9E1C25F7B81415B84B28692998D4C5D8B987249D624CC84CA80DB26D5570A5E6E425D93A036745C3A9D3100C27105181843C3AE33C66F069EF14CB18095CE9AB9A12FD9E6E3B558B044ED3F612A0882F3572FC226386CB460BA2D3B54CED0686B51CF6881298D37BF2D4F30B76A73D6BB5443488B86524508EB4D9AC01D698CA393A47B2F505DC097608C50B057B336BA08BC3F339ADF1CA10A6CC5007002D9BBF5D31A602B000DB5CE7080196FC1F0C7024F1AB30343C43A8215DE9801B085B3DCA4018DADD02810531B784283AFB1F66CC69E7512B100176E276A0E6047F0429B3300BA50761B692FD69965747C0906B9262080AC739D220DB0EB652AE1AC46FAC79ABA4103034ECD7A9346C8EE34E3414FBC9546F1005E510B706BCC376C11071A701B01DA25D480960C053280D526D5D7F7ADA32BB4DA00DE44CBC8D6F04E959864473F9EFA129B32B0E212196DB40A639C35478795C5FCD8EBBCB835F3E1A8F3A0FDFCB70DF35ED97863EDD4A366DA12AD34A246B2D546A36A22C847113CC2D43D46C09C608A4F6DD89C94EAFC22DB60D656AAF4763EA8405818FD08BD91AD186D85D1DC72C8FCC8D9DDE5975D1387125FE3F1326990C2D46EBCE90132EBB28410BE4DEA03B4636F9B342D1A0F993BB68D32350230B8FF6F771BD9E9D6DF11A2C6BBEDDFD58B7ECCB0D352930C3EDF42936CEF57BA06ED194F6FD94EA303CE9D450B699994962071D980CFF3CF970FD947F2924A98CB0ACC492A5E427F889E92E9A44846EC06244401E4405A2C9434C4A818FB444588D57A1A1AE58B7F1209D68043438235D79109C9E6313A16B10FB0C83C92F61F1A72D5F32C12256EB5A1E374790903B05BBCC9D2F13CBF2F54729DBB6FD5902936DF2A32FCB6DC8441C59B266A1E3147E526A418FD009254E8660D6948662CC4A5349C5551E16D6A45428C6E514832BB049A3059B187C545C567683159F7885724921E35B48E64C855AA44B40BE6BB6EC016E89D50993126067F5C5F34267F4C6F4AA586F04563DEC7D0E27AD1993DC093C87AD8286CFFD081E6ADFFBA0387B7F4D3F1BA2D6794A14E00E6682D01E5FE60B6802A161573BE8E4B98ED9F11E3DB8899FC228342C270F3355E2040033676ACAB890B932CD058AD0F75033DC52233C3C4108BEB88C6148BED0DBB3A4058A3B1BBD233BA058380D7DF64FE18581181D703B21D11D3976A01863006B71932E37447DE882FCDE10CC2CC60C09E018630ED590518BD3004EB25A21B5E49EF03005C422D36E4EE40361B22678A45AA8E39907D8696CF1D11D43CA58763476D71000EB26473D01E2F927D417F48296B3493262B2972263D83494D599F09362C70E10813FDE3017C3055B1AE33B9B7B4BAB964D75FECB902B6A6D3DC52F6A6470C5E2000D06379A7D9E55653EC3DBFDBD781CEFC06B3AF85337A7566CE5FA3794D77D9E69A97FDCF7706E71DE6471D06A71CFA7DEA90671BD8CD853974DAC963AF4208499EADD0555EC4F5797B9D763A2BE203971F4E674020E1D36B6FBDCE0EE99A92E597C9BC882A7CF1CDDC3E98EFAAA0315B707389783B50D794D265F5131152B3DDC792BCF7E3247B73C87BF0328571B15C49D94C6E17AAAA54970CF2F055A79555A9EA85402EC6B2781521DFC494C5DFD3CE65839FF793888A162130C9A23C7B81172B1E07B88882CD2A846F99E0D29C39054B06B5B380E9D5C186595AF547733AA2633E4B4E4C33A7CAF8E7732C6B3ECBB44E67C2C849F7661244048915716787CA8E90648EE85B6212A3D00F288B3728D8F2C517730ACDAB392C95E6AB0525EE151C8E1A97624FB178D94645B14831A75886CD6549959F2C04CE2FAC123841F3D5960A3015E9E11C969C94684117784387230FE439281D63A5532ED6DA2A1C28106D4E44A76BB0C2DBAA665E3D60A08B3133BC30660EF678C10A1FF0B2A578C1EF9ACD5023D9B4D863474FA21F0471C19E58325CC2019143AEB39983C9D60B6D34026A4E4ABBD2D692D8569DD64429E55A517F3D60D1188BE081BB190C599B3A7B04A2A5FB011FF7BA0237DAD8B30B303DD60995258739A7C2D4EAB8A1FCB148F9D1E248A40903CA1D8A349FCD69359E912C29D85F12E95D1E0F94EB5AFEC56632135F29E06734DD1B0630652900284B584A34A7CBC6026549B2DF2D5AA9409A3DCA9898A01CFB9ACF36BB6F31CA27BFFD16532D24550CF7C949AB98684E9709FBC952643E5BD2521FFC0849E32DD85EFD14C7DA10B53E66C0A2EEE594B4670D3A0ADBBAD86A1EBBE2E637F0092C9852131C8FD711D5570B3D58C5BAE31461F5D19C0E13CB8EA5C47C3EC899F9C14C69C3D8FA68060C649793D11ECEA0C5B755BADC9C81BF7AEC55D64B6DB1078798CBC9E8B08717EF077B5547E4D5A02D060F473A727A9B6D746EAEDA69270DC498CB09196DA61102FDA0B0F6486749806EEA309D3C801B4B23FF60210D7514384E1AEAAF072CDB6199B330EA84694D30B79CA011B60D08F5837195AD8ABD994A772DEBCEC28009A4C692623E0FAF012AD371F994C9EABC457EB1853B76D13FE8A2A3ADD60C62DA41DF18EB9B6E16479D8C8D86B7337A5D56423B6E9B73D89BB990EFDA0DBFAD882301B0723A3A29D794DFD6A381323E153741179F0EE09393791B75D964A828CDBF51A03311E273C3D6403ADB8ECC205FBA37C4DE3690B96784D08CA8FA9D1DA601ADDB063E3B64D4B686925D0B45EF03EBC1075E6030B25FAE326B8C9461BB300577D1871B5A3257F342A1D5E8A30F410C06CCEEC30E79219AD9D3D4D9755633880D838AB9B8FB62DBE1AFA9BA187FDC1DB2651391970BDB4340723F12B3D4934EF9A5FE5DBB1F95AE3F9C4F52DEA7CCC328EF4B52BA2189BE404596E984B6FD8BBFCCFC80AEBFCEFF1D1C65E947F99F17819FDB5A5439AEBDD07F24497A17FD41C2B3E97747DF4F27E781EF2585FF98BD971359AE6649B20C143E4E4CFC50CCCB678800A20F3E5D84A7A5246151422D235F2A22A057555952AA9D850A2A41143EE5BE5C6E427B2EE9EF34FF7D1393859FE40E83C7DD037D3E4451D032CAA71A23D06E789741522CBA8B3AC22F5EBC78CE6E759928AFDFD98F84181F5B45F6A4055945F06B15E93CFAB583D0D68E9A5DBAFDC034DFDAD3E4234FCB525D04DEC5690001B5DBE8073C9CB65EBE4D9ABBBBBA03F2A2D96BB5D14250767784A1FDCD5E8F708B89617747183FC1D8E571E6AC2691E12EA2CCDBE9EC0386B83524EA4FB2CB18EA639C1B6F1578E5F4AAE0031EA4EC327238AF924E7B54D6A1A413A1DA9D045386273FD86FA21BE792F62BEDC675A35B1F73BF9212FB14F02B2FE0A0FF86762F3BB6A2C9272D6614D1CDA4535B25E792F6DC639D4ADA53718232C699C4ED2A5A762971AAE224C712A7D4192713B75C11BC4D9C6EF0152B28D509D99E6F7231F78D5D9EA1FA4063E31CD24987349E2116EB76331557B98A748333E327A254B7FB2D12B0C3C55ECB439B45B98B05E0EE0205F68ED865A0349E16AEB5533F5477173F9867C32E23A8BE13EFA41772F706E71364ED3871802107438D13C22EC3D1C9557A1FCBC99EF6358CB7835310BA11EBCAF5C12D2B15FE0F5DEE5845AF87C385682548FBA61C06B47900E61A37460FEE8EA176CBBAE075EF40100F805D16CA7E360AA593C1ABB58533B5EB37430E68FA2C67BD414CE4F570AB2AEA24E27C132C48B5B534EC665A82DBBD9B0E869EB7EE4C4D5B8C52EB0BF88E37AA1AAB72B90060E36DC05EAEA64EFC6DB3F886182C8732D7C77665A3FF35B7056611EA8F8F8EE4E8E160844E8EA894A68B7CDE2A2839FAD8B6C9A439B1093EAE8F252057396AA07B0B9F2E65645A6E44D9CF628479B1739FC2623A9C9C2F8A7034175EB2F096B2B064BE16FA7648D39EBA5D72B65E4087BED8ED1C74E64E7D76B3FD88F85339EE30E38E8EB66E8C5F19165B61625C44628BCA817069EEF1E866B6EB0994F0CA15691BACC61D41B2CD2CE97662B654D01A5FD5D1F0A85193DB324D6F270A879DA4BB0170D439DA2C92BD2B3DA8D94C344EA112552669AFD416162E6F1B75156B64E378BB89C183B3EDE1F41D97B007BB4CCDABB35BB6C514CC10EF8BD6C393569B61C470219A41724813D3FA99696CC7AB233EF42F7F2B6618F071EC4140C286FBAE9B0FEB8DF6438A21853D7C644972DFFBD11F2D46AC2348F030280A1D82051B191C23BC43030814CE8C8F1D523E611720A279EE79747CE823990C0792DAF04E1503BDDB686AC1D118FD491499A45E20623B642E10823DFF6C7CDD328202A97CD30EAA637CD581059E1A1C188719655B60B10D3349098A83A6D80E488CAA256C1EC2638FADC43706B8832B2971981359C4EC026B5EFF08340812EAFE94CDFC7D44F5919BE62DC311B1A9B92168B5007E65881C7855DD158C5BB0C4961C4EEE051BFE3E6E0E34964880278C047A45967DB94C300E6D22D76C1083624C780DBFCBDF22248DB1EB6F87A27155536F36901858005DB667668FBB64F108A810745AB21EC55DD21F3B33090D38F314ADAADFE8AEAF4084F7B425C064A5E624551A4E4C27C5BF88D942F13EF7D974F910513C14C6DF77F7552E29DC8CBA421695EA1AD91C48954590235D9DAC5E94AA6313D5355D14418E75B5B0D640522D6CA2BA96322682A612D92253AA4ACEA2AEF0868DC2A11B35E90C401E36290B306E753E7DB5DCF247AA914B555756851BD00144BC90955122E600A0C204C5D6E28533169011C3250398296303EBAAE24FF9A4AAF8647555552858A321636E91D4A3C66440062E8FFC6954A162225257ACC88834800BD7A86B08AAD4F4FACC4C95F12E97723D42BABAAA3A7494B94A33D03B586658E5596921D8FC52378BE8F56F5DC04C11A3873C5AE568AABA3065C987F1C05CA9264C56357B14DB0D70C3517382FF2C2D79902313868494261EC8F1DD346001EE2FA4E085858311D72D197F42002B94297AD9D285C3EA8D55E589AC39ABD4416C506F18A68BBA8E6D1DDB50CF0B0361833D355C890D4607802D92AB2786C130B30996E54C20B7844D2A2B7688455A8BF7FEF024ED191B324C52770D25196AABB4126ECDED702653ADD90B8C71099DBB0D18242BFA6E62BADCBD0B3C0BD5BBA5828F625A6756A8CD6E159C30B0CF75D50DF8EC9EA1C17D77CA06C1B254C30BCC0E95EB886A9798F7844FD80E5688F6931013503BCBAE8D97CB4B3BDF860493E4140DB599A006076A73C2DD4540D92D3321D82FF0979D3219F53D19718D61936A816415131435866217385222B650D29F1168839FF6C73A64F96D15ABD4A10ADD0E86191A88408267695AD2CB121D3F146DC64491A52FF6E1D3B491C184FBE97A2416191CD00D75360780CDE9891C769F6D0E088DE85877647034487195EBB4D35971065C7EA03FA5F8C9A7B3DB4D98BDF157FCBA2489FFD49038A534C322324C43B4CA73153E46D555B5D0A22A8B187488A4DED24BBDF338F51FBD454A93172449FCF0693AC9DF31CCE2933E90E555F86993AE3729ED32593D041C33B22B6FACFED399D4E6D34F793894C445176833FDEC59C44F61164E6259B7FBBDE2A132804476975E3E2B998D659A6DA29EBED6943E46A121A1927DB509C01D59AD034A2CF914CEBD2F046E9B9E873CC74E2F7DEF29F6564949A3294F7F52F82D572F3FFD1F3A57156504290100, 
+'6.0.0-20911');
+[2017-03-27 17:47:11,718 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:47:11,719 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Executing at 2017/3/27 17:47:11 +08:00
+
+[2017-03-27 17:47:11,761 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Completed in 41 ms with result: 1
+
+[2017-03-27 17:47:11,762 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:47:11,767 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：SELECT
+`GroupBy1`.`A1` AS `C1`
+FROM (SELECT
+COUNT(1) AS `A1`
+FROM `__MigrationHistory` AS `Extent1`) AS `GroupBy1`
+[2017-03-27 17:47:11,768 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:47:11,768 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Executing at 2017/3/27 17:47:11 +08:00
+
+[2017-03-27 17:47:11,770 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Completed in 0 ms with result: EFMySqlDataReader
+
+[2017-03-27 17:47:11,770 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:47:11,852 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：SELECT
+`GroupBy1`.`A1` AS `C1`
+FROM (SELECT
+COUNT(1) AS `A1`
+FROM `__MigrationHistory` AS `Extent1`
+ WHERE (`Extent1`.`ContextKey` = @p__linq__0) AND (@p__linq__0 IS NOT NULL)) AS `GroupBy1`
+[2017-03-27 17:47:11,852 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:47:11,854 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- p__linq__0: 'ZSZ.Service.ZSZDbContext' (Type = String, Size = 24)
+
+[2017-03-27 17:47:11,855 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Executing at 2017/3/27 17:47:11 +08:00
+
+[2017-03-27 17:47:11,859 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Completed in 3 ms with result: EFMySqlDataReader
+
+[2017-03-27 17:47:11,859 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:47:11,927 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：SELECT
+`Project1`.`C1`, 
+`Project1`.`MigrationId`, 
+`Project1`.`Model`
+FROM (SELECT
+`Extent1`.`MigrationId`, 
+`Extent1`.`Model`, 
+1 AS `C1`
+FROM `__MigrationHistory` AS `Extent1`
+ WHERE (`Extent1`.`ContextKey` = @p__linq__0) AND (@p__linq__0 IS NOT NULL)) AS `Project1`
+ ORDER BY 
+`Project1`.`MigrationId` DESC LIMIT 1
+[2017-03-27 17:47:11,928 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-03-27 17:47:11,929 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- p__linq__0: 'ZSZ.Service.ZSZDbContext' (Type = String, Size = 24)
+
+[2017-03-27 17:47:11,929 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Executing at 2017/3/27 17:47:11 +08:00
+
+[2017-03-27 17:47:11,933 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Completed in 3 ms with result: EFMySqlDataReader
+
+[2017-03-27 17:47:11,934 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+

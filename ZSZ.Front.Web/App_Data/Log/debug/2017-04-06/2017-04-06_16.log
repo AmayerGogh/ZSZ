@@ -1,0 +1,43 @@
+﻿[2017-04-06 16:53:36,861 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：SELECT
+CASE WHEN (EXISTS(SELECT
+1 AS `C1`
+FROM `T_Cities` AS `Extent1`
+ WHERE (0 = `Extent1`.`IsDeleted`) AND ((`Extent1`.`Name` = @p__linq__0) AND (@p__linq__0 IS NOT NULL)))) THEN (1)  WHEN (NOT EXISTS(SELECT
+1 AS `C1`
+FROM `T_Cities` AS `Extent2`
+ WHERE (0 = `Extent2`.`IsDeleted`) AND ((`Extent2`.`Name` = @p__linq__0) AND (@p__linq__0 IS NOT NULL)))) THEN (0) END AS `C1`
+FROM (SELECT
+1 AS `X`) AS `SingleRowTable1`
+[2017-04-06 16:53:36,873 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-04-06 16:53:36,878 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- p__linq__0: '不不不' (Type = String, Size = 3)
+
+[2017-04-06 16:53:36,879 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Executing at 2017/4/6 16:53:36 +08:00
+
+[2017-04-06 16:53:36,889 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Completed in 6 ms with result: EFMySqlDataReader
+
+[2017-04-06 16:53:36,890 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-04-06 16:53:37,131 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：SET SESSION sql_mode='ANSI';INSERT INTO `T_Cities`(
+`Name`, 
+`CreateDateTime`, 
+`IsDeleted`) VALUES (
+@gp1, 
+@gp2, 
+0);
+SELECT
+`Id`
+FROM `T_Cities`
+ WHERE  row_count() > 0 AND `Id`=last_insert_id()
+[2017-04-06 16:53:37,131 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-04-06 16:53:37,132 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- @gp1: '不不不' (Type = String, IsNullable = false, Size = 3)
+
+[2017-04-06 16:53:37,133 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- @gp2: '2017/4/6 16:53:36' (Type = DateTime, IsNullable = false)
+
+[2017-04-06 16:53:37,133 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Executing at 2017/4/6 16:53:37 +08:00
+
+[2017-04-06 16:53:37,137 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Completed in 3 ms with result: EFMySqlDataReader
+
+[2017-04-06 16:53:37,138 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+

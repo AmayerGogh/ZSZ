@@ -1,0 +1,5 @@
+D:\MVC\ZSZ\ZSZ.DTO\bin\Debug\ZSZ.DTO.dll
+D:\MVC\ZSZ\ZSZ.DTO\bin\Debug\ZSZ.DTO.pdb
+D:\MVC\ZSZ\ZSZ.DTO\obj\Debug\ZSZ.DTO.dll
+D:\MVC\ZSZ\ZSZ.DTO\obj\Debug\ZSZ.DTO.pdb
+D:\MVC\ZSZ\ZSZ.DTO\obj\Debug\ZSZ.DTO.csprojResolveAssemblyReference.cache

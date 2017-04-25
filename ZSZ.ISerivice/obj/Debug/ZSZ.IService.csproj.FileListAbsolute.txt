@@ -1,0 +1,7 @@
+D:\MVC\ZSZ\ZSZ.ISerivice\bin\Debug\ZSZ.ISerivice.dll
+D:\MVC\ZSZ\ZSZ.ISerivice\bin\Debug\ZSZ.ISerivice.pdb
+D:\MVC\ZSZ\ZSZ.ISerivice\obj\Debug\ZSZ.ISerivice.dll
+D:\MVC\ZSZ\ZSZ.ISerivice\obj\Debug\ZSZ.ISerivice.pdb
+D:\MVC\ZSZ\ZSZ.ISerivice\bin\Debug\ZSZ.DTO.dll
+D:\MVC\ZSZ\ZSZ.ISerivice\bin\Debug\ZSZ.DTO.pdb
+D:\MVC\ZSZ\ZSZ.ISerivice\obj\Debug\ZSZ.IService.csprojResolveAssemblyReference.cache

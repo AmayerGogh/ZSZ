@@ -1,0 +1,106 @@
+﻿[2017-04-09 16:28:42,703 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：SELECT
+CASE WHEN (EXISTS(SELECT
+1 AS `C1`
+FROM `T_Cities` AS `Extent1`
+ WHERE (0 = `Extent1`.`IsDeleted`) AND ((`Extent1`.`Name` = @p__linq__0) AND (@p__linq__0 IS NOT NULL)))) THEN (1)  WHEN (NOT EXISTS(SELECT
+1 AS `C1`
+FROM `T_Cities` AS `Extent2`
+ WHERE (0 = `Extent2`.`IsDeleted`) AND ((`Extent2`.`Name` = @p__linq__0) AND (@p__linq__0 IS NOT NULL)))) THEN (0) END AS `C1`
+FROM (SELECT
+1 AS `X`) AS `SingleRowTable1`
+[2017-04-09 16:28:42,703 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：SELECT
+CASE WHEN (EXISTS(SELECT
+1 AS `C1`
+FROM `T_Cities` AS `Extent1`
+ WHERE (0 = `Extent1`.`IsDeleted`) AND ((`Extent1`.`Name` = @p__linq__0) AND (@p__linq__0 IS NOT NULL)))) THEN (1)  WHEN (NOT EXISTS(SELECT
+1 AS `C1`
+FROM `T_Cities` AS `Extent2`
+ WHERE (0 = `Extent2`.`IsDeleted`) AND ((`Extent2`.`Name` = @p__linq__0) AND (@p__linq__0 IS NOT NULL)))) THEN (0) END AS `C1`
+FROM (SELECT
+1 AS `X`) AS `SingleRowTable1`
+[2017-04-09 16:28:42,741 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-04-09 16:28:42,759 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- p__linq__0: 'cc' (Type = String, Size = 2)
+
+[2017-04-09 16:28:42,741 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-04-09 16:28:42,769 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- p__linq__0: 'cc' (Type = String, Size = 2)
+
+[2017-04-09 16:28:42,779 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Executing at 2017/4/9 16:28:42 +08:00
+
+[2017-04-09 16:28:42,765 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Executing at 2017/4/9 16:28:42 +08:00
+
+[2017-04-09 16:28:42,899 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Completed in 105 ms with result: EFMySqlDataReader
+
+[2017-04-09 16:28:42,899 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Completed in 98 ms with result: EFMySqlDataReader
+
+[2017-04-09 16:28:42,901 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-04-09 16:28:42,903 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-04-09 16:28:44,360 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：SET SESSION sql_mode='ANSI';INSERT INTO `T_Cities`(
+`Name`, 
+`CreateDateTime`, 
+`IsDeleted`) VALUES (
+@gp1, 
+@gp2, 
+0);
+SELECT
+`Id`
+FROM `T_Cities`
+ WHERE  row_count() > 0 AND `Id`=last_insert_id()
+[2017-04-09 16:28:44,361 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：SET SESSION sql_mode='ANSI';INSERT INTO `T_Cities`(
+`Name`, 
+`CreateDateTime`, 
+`IsDeleted`) VALUES (
+@gp1, 
+@gp2, 
+0);
+SELECT
+`Id`
+FROM `T_Cities`
+ WHERE  row_count() > 0 AND `Id`=last_insert_id()
+[2017-04-09 16:28:44,365 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-04-09 16:28:44,367 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-04-09 16:28:44,369 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- @gp1: 'cc' (Type = String, IsNullable = false, Size = 2)
+
+[2017-04-09 16:28:44,372 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- @gp1: 'cc' (Type = String, IsNullable = false, Size = 2)
+
+[2017-04-09 16:28:44,376 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- @gp2: '2017/4/9 16:28:42' (Type = DateTime, IsNullable = false)
+
+[2017-04-09 16:28:44,377 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- @gp2: '2017/4/9 16:28:42' (Type = DateTime, IsNullable = false)
+
+[2017-04-09 16:28:44,379 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Executing at 2017/4/9 16:28:44 +08:00
+
+[2017-04-09 16:28:44,382 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Executing at 2017/4/9 16:28:44 +08:00
+
+[2017-04-09 16:28:44,422 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Completed in 34 ms with result: EFMySqlDataReader
+
+[2017-04-09 16:28:44,423 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Completed in 36 ms with result: EFMySqlDataReader
+
+[2017-04-09 16:28:44,425 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-04-09 16:28:44,427 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-04-09 16:29:13,979 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：SELECT
+CASE WHEN (EXISTS(SELECT
+1 AS `C1`
+FROM `T_Cities` AS `Extent1`
+ WHERE (0 = `Extent1`.`IsDeleted`) AND ((`Extent1`.`Name` = @p__linq__0) AND (@p__linq__0 IS NOT NULL)))) THEN (1)  WHEN (NOT EXISTS(SELECT
+1 AS `C1`
+FROM `T_Cities` AS `Extent2`
+ WHERE (0 = `Extent2`.`IsDeleted`) AND ((`Extent2`.`Name` = @p__linq__0) AND (@p__linq__0 IS NOT NULL)))) THEN (0) END AS `C1`
+FROM (SELECT
+1 AS `X`) AS `SingleRowTable1`
+[2017-04-09 16:29:13,982 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
+[2017-04-09 16:29:13,985 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- p__linq__0: 'cc' (Type = String, Size = 2)
+
+[2017-04-09 16:29:13,989 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Executing at 2017/4/9 16:29:13 +08:00
+
+[2017-04-09 16:29:13,994 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：-- Completed in 2 ms with result: EFMySqlDataReader
+
+[2017-04-09 16:29:13,998 --  DEBUG]  ZSZ.Service.ZSZDbContext+<>c.<.ctor>b__0_0:EF执行SQL：
+
